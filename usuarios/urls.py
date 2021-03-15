@@ -6,6 +6,7 @@ from .views import SignupView, success, GreetingView, MyFormView
 
 urlpatterns = [
     path('signup/', SignupView.as_view(), name="signup"),
+    # ↓ esto es ignoren
     path('success/', success, name="success"),
     path('about/', GreetingView.as_view(greeting="G'day")),
     path('myform/', login_required(MyFormView.as_view()), name="myform"),
