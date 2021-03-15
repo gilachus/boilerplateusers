@@ -1,12 +1,15 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.http import HttpResponse, HttpResponseRedirect
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.views import View
+
+from django.contrib.auth.forms import UserCreationForm
 from django.views import generic
 from .forms import PerfilUsuarioCreateForm
+from django.urls import reverse_lazy
+
 
 class SignupView(generic.CreateView):
     # model = User
@@ -15,7 +18,7 @@ class SignupView(generic.CreateView):
     form_class = PerfilUsuarioCreateForm
     success_url = reverse_lazy('login')
 
-# ↓ esto es ignoren
+# ↓ ignoren
 class ClassView(View):
     pass
 
