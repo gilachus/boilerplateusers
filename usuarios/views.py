@@ -6,11 +6,13 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.views import generic
+from .forms import PerfilUsuarioCreateForm
 
 class SignupView(generic.CreateView):
-    #model = User
+    # model = User
     template_name = "registration/signup.html"
-    form_class = UserCreationForm
+    # form_class = UserCreationForm
+    form_class = PerfilUsuarioCreateForm
     success_url = reverse_lazy('login')
 
 # ↓ esto es ignoren

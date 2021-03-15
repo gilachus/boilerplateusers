@@ -7,7 +7,7 @@ from .models import PerfilUsuario
 class PerfilUsuarioCreateForm(UserCreationForm):
     class Meta(UserCreationForm):
         model = PerfilUsuario
-        fields = UserCreationForm.Meta.fields + ('edad',)
+        fields = UserCreationForm.Meta.fields + ('email', 'edad',)
 
 class PerfilUsuarioChangeForm(UserChangeForm):
     class Meta:
