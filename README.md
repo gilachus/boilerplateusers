@@ -13,7 +13,13 @@ corre las migraciones desde la ubicacion del archivo manage.py
 
 `python manage.py migrate`
 
+crea un super user
+
+`python manage.py createsuperuser`
+
 prueba el servidor de desarrollo 
 
 `python manage runserver`
+
+nota: esta opción es un poco problemática para hacer cambios ya que toca borrar la base de datos por ejemplo si cambias el modo de login de username a correo, o si tenias un esquema con el usuario por defecto y pasas a este personalizado la migración entra en conflicto.
 
